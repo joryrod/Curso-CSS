@@ -1,0 +1,47 @@
+.caja1{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+}
+article{
+    height: 130px;
+    width: 33%;
+}
+.extremos1{
+    background: red;
+}
+.img{
+    max-width: 50px;
+    max-width: px;
+    max-block-size: 13;
+    height: auto;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+.caja2{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+}
+article{
+    height: 130px;
+    width: 33%;
+}
+.extremos2{
+    background: red;
+}
+.caja3{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+}
+article{
+    height: 130px;
+    width: 33%;
+}
+.extremos3{
+    background: red;
+}
