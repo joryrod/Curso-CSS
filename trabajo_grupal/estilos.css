@@ -1,0 +1,80 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.contenedor {
+    display: flex;
+    gap: 40px;
+}
+
+.circulo-progresivo {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(
+        var(--color) 0deg,
+        #e0e0e0 0deg
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+    --percentage: 0;
+    animation: loadProgress 2s ease-out forwards;
+}
+
+.circulo-progresivo[data-percentage="75"] {
+    --color: #4caf50;
+    --percentage: 75;
+}
+
+.circulo-progresivo[data-percentage="60"] {
+    --color: #2196f3;
+    --percentage: 60;
+}
+
+.circulo-progresivo:hover {
+    transform: scale(1.1);
+}
+
+.circulo-interno {
+    width: 85%;
+    height: 85%;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.circulo-progresivo .porcentage {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--color);
+}
+
+@keyframes loadProgress {
+    0% {
+        background: conic-gradient(
+            var(--color) 0deg,
+            #e0e0e0 0deg
+        );
+    }
+    100% {
+        background: conic-gradient(
+            var(--color) calc(var(--percentage) * 3.6deg),
+            #e0e0e0 calc(var(--percentage) * 3.6deg)
+        );
+    }
+}
+
